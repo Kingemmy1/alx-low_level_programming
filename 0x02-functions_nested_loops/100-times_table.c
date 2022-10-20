@@ -25,7 +25,7 @@ void print_times_table(int n)
 				_putch;
 			_putchar((prod % 10) + '0');
 		}
-		if (n > 15 || n < 0);
+		if (n > 15 || n < 0)
 			_putchar(void)
 			return (0);
 	}
