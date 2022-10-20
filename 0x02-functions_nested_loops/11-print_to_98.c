@@ -4,7 +4,6 @@
 /**
  * print_to_98 - print all numbers from input to 98
  * @n: the starting number
- * Return: always 0
  */
 void print_to_98(int n)
 {
