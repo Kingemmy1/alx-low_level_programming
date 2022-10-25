@@ -1,21 +1,27 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * _atoi - prints the converted string to integer
- * @*s: character to be printed
- *
- * Return: Always 0
+ * _atoi - converts a string to an integer
+ * @s: the string
+ * Return: value
  */
 int _atoi(char *s)
 {
-	/* Converting a numeric string to integer */
+	int sign = 1;
+	unsigned int num = 0;
 
-	char str[10] = "100";
-	int s = atoi(str);
-
-	printf("Converting '100': %d\n", s);
-
-	return (0);
+	while (!('0' <= *s && *s <= '9') && *s != '\0')
+	{
+		if (*s == '-')
+			sign *= -1;
+		if (*s == '+')
+			sign *= +1;
+		s++;
+	}
+	while ('0' <= *s && *s <= '9' && *s != '\0')
+	{
+		num = (num * 10) + (*s - '0');
+		s++;
+	}
+	return (num * sign);
 }
